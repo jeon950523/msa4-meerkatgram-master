@@ -18,12 +18,9 @@
         <module name="msa4-meerkatgram.test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="msa4-meerkatgram" options="-parameters" />
-      <module name="msa4-meerkatgram.main" options="-parameters" />
-      <module name="msa4-meerkatgram.test" options="-parameters" />
-    </option>
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
   </component>
 </project>
