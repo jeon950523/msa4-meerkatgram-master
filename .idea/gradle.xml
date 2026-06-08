@@ -5,6 +5,11 @@
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/msa4-meerkatgram-master" />
         <option name="gradleJvm" value="temurin-17 (3)" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/msa4-meerkatgram-master" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>
