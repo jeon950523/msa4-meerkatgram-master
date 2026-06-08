@@ -6,8 +6,10 @@ import com.msa4meerkatgram.domain.post.requests.PostCreateReq;
 import com.msa4meerkatgram.domain.post.requests.PostIndexRequest;
 import com.msa4meerkatgram.domain.post.responses.PostIndexRes;
 import com.msa4meerkatgram.global.errors.custom.DeletedRecordException;
+import com.msa4meerkatgram.global.errors.custom.PostPermissionDeniedException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -43,14 +45,29 @@ public class PostService {
         }
         return post;
     }
-    
-    public void create(PostCreateReq req, long userId){
+    @Transactional(rollbackFor = Exception.class)
+    public Post create(PostCreateReq req, long userId){
         Post post = Post.builder()
             .userId(userId)
             .content(req.content())
             .image(req.image())
             .build();
         postMapper.postCreate(post);
+        return postMapper.findByPk(post.getId());
         
+    }
+    @Transactional(rollbackFor = Exception.class)
+    public void delete(long userId, long id){
+       
+        Post post = postMapper.findByPk(id);
+        
+        if(post == null|| post.getDeletedAt() !=null){
+            throw new DeletedRecordException("이미 삭제된 게시글 입니다.");
+        }
+        
+        int deleteCount = postMapper.postDelete(id, userId);
+        if(deleteCount == 0 ){
+            throw new PostPermissionDeniedException("삭제할 권한이 없습니다.");
+        }
     }
 }

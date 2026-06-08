@@ -12,4 +12,7 @@ public interface PostMapper {
     Post findByPk(long id);
     long countPostsByUserId(long userId);
     void postCreate(Post post);
+    
+    Post findByPkForDeleted(long id);
+    int postDelete(long id, long userId);
 }

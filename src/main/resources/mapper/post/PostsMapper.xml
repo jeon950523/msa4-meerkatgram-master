@@ -44,11 +44,22 @@
         from posts
         where deleted_at is null and user_id = #{userId}
     </select>
-    <insert id="postCreate">
+    <insert id="postCreate" useGeneratedKeys="true" keyProperty="id">
     insert into posts (user_id, content, image)
     values (#{userId}, #{content}, #{image})
 
 
     </insert>
-    
+    <select id="findByPkForDeleted" resultMap="postsResultMap">
+        select *
+        from posts
+        where id = #{id}
+    </select>
+    <update id="postDelete">
+    UPDATE posts
+    set updated_at = now(),
+        deleted_at = now()
+    where id = #{id} and user_id = #{userId} and deleted_at is null
+
+    </update>
 </mapper>

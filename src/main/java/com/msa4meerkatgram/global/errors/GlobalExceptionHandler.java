@@ -51,7 +51,16 @@ public class GlobalExceptionHandler {
                 .build()
         );
     }
-    
+    @ExceptionHandler(PostPermissionDeniedException.class)
+    public ResponseEntity<GlobalRes<String>> PostPermissionDeniedExceptionHandle(PostPermissionDeniedException e){
+        return ResponseEntity.status(403).body(
+            GlobalRes.<String>builder()
+                .code("E03")
+                .message("삭제 권한이 없습니다.")
+                .data(e.getMessage())
+                .build()
+        );
+    }
     
     
 
@@ -87,19 +96,6 @@ public class GlobalExceptionHandler {
     }
     
     
-    
-    
-    
-    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-    public ResponseEntity<GlobalRes<String>> methodArgumentTypeMismatchHandle(MethodArgumentTypeMismatchException e){
-        return ResponseEntity.status(400).body(
-            GlobalRes.<String>builder()
-                .code("E21")
-                .message("요청 파라미터에 이상이 있습니다.")
-                .data(String.format("%s : 필드를 확인해 주세요!", e.getName()))
-                .build()
-        );
-    }
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<GlobalRes<Map<String, String>>> methodArgumentNotValidHandle(MethodArgumentNotValidException e) {
         Map<String, String> errors = e.getBindingResult()
@@ -119,6 +115,16 @@ public class GlobalExceptionHandler {
                 .build()
         );
     }
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    public ResponseEntity<GlobalRes<String>> methodArgumentTypeMismatchHandle(MethodArgumentTypeMismatchException e){
+        return ResponseEntity.status(400).body(
+            GlobalRes.<String>builder()
+                .code("E21")
+                .message("요청 파라미터에 이상이 있습니다.")
+                .data(String.format("%s : 필드를 확인해 주세요!", e.getName()))
+                .build()
+        );
+    }
     @ExceptionHandler(FileManagedException.class)
     public ResponseEntity<GlobalRes<String>> fileManagedExceptionHandle(FileManagedException e){
         log.error(
@@ -133,6 +139,10 @@ public class GlobalExceptionHandler {
                 .build()
         );
     }
+
+   
+    
+    
     @ExceptionHandler(SQLException.class)
     public ResponseEntity<GlobalRes<String>> sqlHandle(SQLException e){
         log.error("DB에러: ", e);

@@ -12,8 +12,9 @@ import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
+@Validated
 @RequiredArgsConstructor 
 @RestController
 @RequestMapping("/api")
@@ -49,13 +50,28 @@ public class PostController {
     }
 
     @PostMapping("/posts")
-    public ResponseEntity<GlobalRes<String>> postCreate(@Valid @RequestBody PostCreateReq req,@AuthenticationPrincipal Claims claims) {
+    public ResponseEntity<GlobalRes<Post>> postCreate(@Valid @RequestBody PostCreateReq req,@AuthenticationPrincipal Claims claims) {
     long userId = Long.parseLong(claims.getSubject());
-    postService.create(req, userId);
+    Post result = postService.create(req, userId);
+        return ResponseEntity.status(200).body(
+            GlobalRes.<Post>builder()
+                .code("00")
+                .message("게시글 작성 완료")
+                .data(result)
+                .build());
+    }
+    @DeleteMapping("/posts/{id}")
+    public ResponseEntity<GlobalRes<String>> postDelete(
+        @AuthenticationPrincipal Claims claims, @Min(value = 1, message = "1이상의 숫자만 허용됩니다.") @PathVariable long id ) {
+       
+        long userId = Long.parseLong(claims.getSubject());
+        postService.delete(userId, id);
+        
         return ResponseEntity.status(200).body(
             GlobalRes.<String>builder()
                 .code("00")
-                .message("게시글 작성 완료")
+                .message("게시글 삭제 완료")
+                .data("게시글이 삭제 되었습니다.")
                 .build());
     }
 }
