@@ -45,6 +45,13 @@ public class PostService {
         }
         return post;
     }
+    public List<Post> getMyPosts(long userId){
+        return postMapper.getPostsByUserId(userId);
+    }
+    
+    
+    
+    
     @Transactional(rollbackFor = Exception.class)
     public Post create(PostCreateReq req, long userId){
         Post post = Post.builder()

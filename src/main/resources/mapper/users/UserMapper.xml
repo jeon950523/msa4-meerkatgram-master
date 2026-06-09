@@ -32,4 +32,11 @@
     where deleted_at is null
     and email = #{email}
     </select>
+    
+    <update id="changeByEmail">
+    update users
+    set email = #{email}
+    where id = #{id} and deleted_at is null
+
+    </update>
 </mapper>

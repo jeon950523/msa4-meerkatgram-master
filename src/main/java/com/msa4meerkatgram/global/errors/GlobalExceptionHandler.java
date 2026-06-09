@@ -4,6 +4,7 @@ package com.msa4meerkatgram.global.errors;
 import com.msa4meerkatgram.global.errors.custom.*;
 import com.msa4meerkatgram.global.responses.GlobalRes;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.AuthenticationException;
@@ -139,7 +140,6 @@ public class GlobalExceptionHandler {
                 .build()
         );
     }
-
    
     
     
@@ -150,6 +150,17 @@ public class GlobalExceptionHandler {
             GlobalRes.<String>builder()
                 .code("E80")
                 .message("DB 에러")
+                .data("현재 서비스 이용이 불가합니다. 잠시후 다시 시도해 주세요.")
+                .build()
+        );
+    }
+    @ExceptionHandler(DataAccessException.class)
+    public ResponseEntity<GlobalRes<String>> DatabaseInsertHandle(DataAccessException e){
+        log.error("DB 인서트에러: ", e);
+        return ResponseEntity.status(500).body(
+            GlobalRes.<String>builder()
+                .code("E90")
+                .message("DB 인서트 에러")
                 .data("현재 서비스 이용이 불가합니다. 잠시후 다시 시도해 주세요.")
                 .build()
         );

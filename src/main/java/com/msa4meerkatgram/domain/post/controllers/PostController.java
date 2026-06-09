@@ -14,6 +14,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @Validated
 @RequiredArgsConstructor 
 @RestController
@@ -73,5 +76,21 @@ public class PostController {
                 .message("게시글 삭제 완료")
                 .data("게시글이 삭제 되었습니다.")
                 .build());
+    }
+    
+    @GetMapping("/posts/my")
+    public ResponseEntity<GlobalRes<List<Post>>> myPosts(
+        @AuthenticationPrincipal Claims claims
+    ){
+        long userId = Long.parseLong(claims.getSubject());
+        List<Post> result = postService.getMyPosts(userId);
+        
+        return ResponseEntity.status(200).body(
+            GlobalRes.<List<Post>>builder()
+                .code("00")
+                .message("내가 쓴 게시글 조회 완료")
+                .data(result)
+                .build()
+        );
     }
 }
