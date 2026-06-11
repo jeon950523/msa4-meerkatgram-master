@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/msa4-meerkatgram-master.iml" filepath="$PROJECT_DIR$/.idea/msa4-meerkatgram-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/msa4-meerkatgram.main.iml" filepath="$PROJECT_DIR$/.idea/modules/msa4-meerkatgram.main.iml" />
     </modules>
   </component>
 </project>
