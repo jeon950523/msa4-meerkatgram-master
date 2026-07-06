@@ -12,7 +12,7 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.5.15-SNAPSHOT/55107b7776339e67be26cf0cd92df9c4433d41c8/spring-boot-configuration-processor-3.5.15-SNAPSHOT.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.5.15-SNAPSHOT/6257dbfa20e94d1140e297f2c59ca1704fb06225/spring-boot-configuration-processor-3.5.15-SNAPSHOT.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.46/a5cfe99fdf320e84955ef653f2ce1bf789d11385/lombok-1.18.46.jar" />
         </processorPath>
         <module name="msa4-meerkatgram.main" />
