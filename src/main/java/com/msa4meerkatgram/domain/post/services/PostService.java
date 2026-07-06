@@ -5,7 +5,10 @@ import com.msa4meerkatgram.domain.post.mapper.PostMapper;
 import com.msa4meerkatgram.domain.post.requests.PostCreateReq;
 import com.msa4meerkatgram.domain.post.requests.PostIndexRequest;
 import com.msa4meerkatgram.domain.post.responses.PostIndexRes;
+import com.msa4meerkatgram.domain.user.entities.User;
+import com.msa4meerkatgram.domain.user.mapper.UserMapper;
 import com.msa4meerkatgram.global.errors.custom.DeletedRecordException;
+import com.msa4meerkatgram.global.errors.custom.DuplicatedRecordException;
 import com.msa4meerkatgram.global.errors.custom.PostPermissionDeniedException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,6 +20,7 @@ import java.util.List;
 @Service
 public class PostService {
     private final PostMapper postMapper;
+    private final UserMapper userMapper;
 
     public PostIndexRes index(PostIndexRequest reqParam){
         int offset = (reqParam.page() - 1) * reqParam.limit();
@@ -53,7 +57,7 @@ public class PostService {
     
     
     @Transactional(rollbackFor = Exception.class)
-    public Post create(PostCreateReq req, long userId){
+    public Post create(PostCreateReq req, long userId){       
         Post post = Post.builder()
             .userId(userId)
             .content(req.content())
