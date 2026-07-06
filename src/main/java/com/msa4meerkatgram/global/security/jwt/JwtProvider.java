@@ -1,6 +1,6 @@
 package com.msa4meerkatgram.global.security.jwt;
 
-import com.msa4meerkatgram.domain.user.entities.User;
+import com.msa4meerkatgram.domain.user.entities.UserMybatis;
 import com.msa4meerkatgram.global.errors.custom.InvalidTokenException;
 import com.msa4meerkatgram.global.security.cookie.CookieManager;
 import io.jsonwebtoken.*;
@@ -26,7 +26,7 @@ public class JwtProvider {
         this.cookieManager = cookieManager;
     }
     
-    private String generateToken(User user, long ttl){
+    private String generateToken(UserMybatis user, long ttl){
         Date now = new Date();
         
         return Jwts.builder()
@@ -42,11 +42,11 @@ public class JwtProvider {
             .compact();
         
     }
-    public String generateAccessToken(User user){
+    public String generateAccessToken(UserMybatis user){
         return this.generateToken(user, jwtConfig.accessTokenExpiry());
     }
     
-    public String generateRefreshToken(User user) {
+    public String generateRefreshToken(UserMybatis user) {
         return this.generateToken(user, jwtConfig.refreshTokenExpiry());
     }
     // 쿠키에서 리프래시 토큰을 추출

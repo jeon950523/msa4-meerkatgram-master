@@ -1,6 +1,6 @@
 package com.msa4meerkatgram.domain.post.controllers;
 
-import com.msa4meerkatgram.domain.post.entities.Post;
+import com.msa4meerkatgram.domain.post.entities.PostMybatis;
 import com.msa4meerkatgram.domain.post.requests.PostCreateReq;
 import com.msa4meerkatgram.domain.post.requests.PostIndexRequest;
 import com.msa4meerkatgram.domain.post.responses.PostIndexRes;
@@ -38,13 +38,13 @@ public class PostController {
     }
 
     @GetMapping("/posts/{id}")
-    public ResponseEntity<GlobalRes<Post>> show(
+    public ResponseEntity<GlobalRes<PostMybatis>> show(
         @Min(value = 1, message = "1 이상 숫자만 허용합니다.") @PathVariable long id
     ) {
-        Post result = postService.show(id);
+        PostMybatis result = postService.show(id);
 
         return ResponseEntity.status(200).body(
-            GlobalRes.<Post>builder()
+            GlobalRes.<PostMybatis>builder()
                 .code("00")
                 .message("게시글 상세")
                 .data(result)
@@ -53,11 +53,11 @@ public class PostController {
     }
 
     @PostMapping("/posts")
-    public ResponseEntity<GlobalRes<Post>> postCreate(@Valid @RequestBody PostCreateReq req,@AuthenticationPrincipal Claims claims) {
+    public ResponseEntity<GlobalRes<PostMybatis>> postCreate(@Valid @RequestBody PostCreateReq req, @AuthenticationPrincipal Claims claims) {
     long userId = Long.parseLong(claims.getSubject());
-    Post result = postService.create(req, userId);
+    PostMybatis result = postService.create(req, userId);
         return ResponseEntity.status(200).body(
-            GlobalRes.<Post>builder()
+            GlobalRes.<PostMybatis>builder()
                 .code("00")
                 .message("게시글 작성 완료")
                 .data(result)
@@ -79,14 +79,14 @@ public class PostController {
     }
     
     @GetMapping("/posts/my")
-    public ResponseEntity<GlobalRes<List<Post>>> myPosts(
+    public ResponseEntity<GlobalRes<List<PostMybatis>>> myPosts(
         @AuthenticationPrincipal Claims claims
     ){
         long userId = Long.parseLong(claims.getSubject());
-        List<Post> result = postService.getMyPosts(userId);
+        List<PostMybatis> result = postService.getMyPosts(userId);
         
         return ResponseEntity.status(200).body(
-            GlobalRes.<List<Post>>builder()
+            GlobalRes.<List<PostMybatis>>builder()
                 .code("00")
                 .message("내가 쓴 게시글 조회 완료")
                 .data(result)

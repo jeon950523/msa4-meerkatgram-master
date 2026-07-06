@@ -18,7 +18,10 @@
         <module name="msa4-meerkatgram.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel target="17">
+      <module name="com.msa4-meerkatgram.main" target="17" />
+      <module name="com.msa4-meerkatgram.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />

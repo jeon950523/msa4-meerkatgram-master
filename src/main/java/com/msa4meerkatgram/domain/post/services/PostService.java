@@ -1,14 +1,12 @@
 package com.msa4meerkatgram.domain.post.services;
 
-import com.msa4meerkatgram.domain.post.entities.Post;
+import com.msa4meerkatgram.domain.post.entities.PostMybatis;
 import com.msa4meerkatgram.domain.post.mapper.PostMapper;
 import com.msa4meerkatgram.domain.post.requests.PostCreateReq;
 import com.msa4meerkatgram.domain.post.requests.PostIndexRequest;
 import com.msa4meerkatgram.domain.post.responses.PostIndexRes;
-import com.msa4meerkatgram.domain.user.entities.User;
 import com.msa4meerkatgram.domain.user.mapper.UserMapper;
 import com.msa4meerkatgram.global.errors.custom.DeletedRecordException;
-import com.msa4meerkatgram.global.errors.custom.DuplicatedRecordException;
 import com.msa4meerkatgram.global.errors.custom.PostPermissionDeniedException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -26,7 +24,7 @@ public class PostService {
         int offset = (reqParam.page() - 1) * reqParam.limit();
         
         // 특정 페이지 게시글 조회
-        List<Post> posts = postMapper.getPagination(reqParam.limit(), offset);
+        List<PostMybatis> posts = postMapper.getPagination(reqParam.limit(), offset);
         
         // 토탈 획득
         long total = postMapper.getTotal();
@@ -42,14 +40,14 @@ public class PostService {
         
     }
     
-    public Post show(long id){
-        Post post = postMapper.findByPk(id);
+    public PostMybatis show(long id){
+        PostMybatis post = postMapper.findByPk(id);
         if (post == null){
             throw new DeletedRecordException("이미 삭제된 게시글 입니다.");
         }
         return post;
     }
-    public List<Post> getMyPosts(long userId){
+    public List<PostMybatis> getMyPosts(long userId){
         return postMapper.getPostsByUserId(userId);
     }
     
@@ -57,8 +55,8 @@ public class PostService {
     
     
     @Transactional(rollbackFor = Exception.class)
-    public Post create(PostCreateReq req, long userId){       
-        Post post = Post.builder()
+    public PostMybatis create(PostCreateReq req, long userId){       
+        PostMybatis post = PostMybatis.builder()
             .userId(userId)
             .content(req.content())
             .image(req.image())
@@ -70,7 +68,7 @@ public class PostService {
     @Transactional(rollbackFor = Exception.class)
     public void delete(long userId, long id){
        
-        Post post = postMapper.findByPk(id);
+        PostMybatis post = postMapper.findByPk(id);
         
         if(post == null|| post.getDeletedAt() !=null){
             throw new DeletedRecordException("이미 삭제된 게시글 입니다.");

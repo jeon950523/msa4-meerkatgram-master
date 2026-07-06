@@ -8,7 +8,7 @@
        set refresh_token = #{refreshToken}, updated_at = now()
        where id = #{id}
    </update>
-   <insert id="created" parameterType="com.msa4meerkatgram.domain.user.entities.User" useGeneratedKeys="true" keyProperty="id">
+   <insert id="created" parameterType="com.msa4meerkatgram.domain.user.entities.UserMybatis" useGeneratedKeys="true" keyProperty="id">
     insert into users(
         email, 
         password, 

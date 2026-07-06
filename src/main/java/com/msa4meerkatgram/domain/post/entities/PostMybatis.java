@@ -6,7 +6,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class Post {
+public class PostMybatis {
     private Long id;
     private Long userId;
     private String content;

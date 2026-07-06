@@ -1,6 +1,6 @@
 package com.msa4meerkatgram.domain.user.services;
 
-import com.msa4meerkatgram.domain.user.entities.User;
+import com.msa4meerkatgram.domain.user.entities.UserMybatis;
 import com.msa4meerkatgram.domain.user.mapper.UserMapper;
 import com.msa4meerkatgram.global.errors.custom.DeletedRecordException;
 import com.msa4meerkatgram.global.errors.custom.DuplicatedRecordException;
@@ -17,7 +17,7 @@ public class UserService {
     
     @Transactional(rollbackFor = Exception.class)
     public String changedEmail(String email, long id){
-        User user = userMapper.findByEmail(email);
+        UserMybatis user = userMapper.findByEmail(email);
         if(user!=null ){
         if(user.getId()==(id)){
             throw new DuplicatedRecordException("현재 사용중인 이메일 입니다.");
