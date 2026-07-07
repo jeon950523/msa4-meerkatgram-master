@@ -51,7 +51,7 @@ public class AuthController {
     @PostMapping("/logout")
     public ResponseEntity<GlobalRes<String>> logout(HttpServletResponse response, @AuthenticationPrincipal Claims claims){
         authService.logout(response, Long.parseLong(claims.getSubject()));
-        
+
         return ResponseEntity.status(200).body(
             GlobalRes.<String>builder()
                 .code("00")
@@ -70,6 +70,6 @@ public class AuthController {
                 .build()
         );
     }
-    
-    
+
+
 }

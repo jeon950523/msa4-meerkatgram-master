@@ -14,19 +14,19 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RequestMapping("/api")
 public class UserController {
-    private final UserService userService;
-    
-    @PatchMapping("/users/email")
-    public ResponseEntity<GlobalRes<String>>changeUserEmail(@AuthenticationPrincipal Claims claims, @Valid @RequestBody UserReq userReq){
-        long userId = Long.parseLong(claims.getSubject());
-        String changeEmail = userService.changedEmail(userReq.email(), userId);
-        
-        return ResponseEntity.status(200).body(
-            GlobalRes.<String>builder()
-                .code("00")
-                .message("이메일 변경 완료")
-                .data(changeEmail)
-                .build()
-        );
-    }
+//    private final UserService userService;
+//    
+//    @PatchMapping("/users/email")
+//    public ResponseEntity<GlobalRes<String>>changeUserEmail(@AuthenticationPrincipal Claims claims, @Valid @RequestBody UserReq userReq){
+//        long userId = Long.parseLong(claims.getSubject());
+//        String changeEmail = userService.changedEmail(userReq.email(), userId);
+//        
+//        return ResponseEntity.status(200).body(
+//            GlobalRes.<String>builder()
+//                .code("00")
+//                .message("이메일 변경 완료")
+//                .data(changeEmail)
+//                .build()
+//        );
+//    }
 }
