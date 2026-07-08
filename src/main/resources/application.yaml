@@ -34,6 +34,7 @@ spring:
         show-sql: true
         properties:
             hibernate:
+                defalut_batch_fetch_size: 100
                 # SQL을 보기 좋게 포맷해서 출력
                 format_sql: true
         # 데이터 소스 초기화 지연 설정

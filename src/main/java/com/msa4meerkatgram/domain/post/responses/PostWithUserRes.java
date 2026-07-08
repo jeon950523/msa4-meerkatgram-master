@@ -2,6 +2,7 @@ package com.msa4meerkatgram.domain.post.responses;
 
 import com.msa4meerkatgram.domain.post.entities.Post;
 import com.msa4meerkatgram.domain.user.entities.User;
+import com.msa4meerkatgram.domain.user.responses.UserRes;
 
 import java.time.LocalDateTime;
 
@@ -15,7 +16,7 @@ public record PostWithUserRes(
     Long userId,
     String userNick,
     String userProfile,
-    User user
+    UserRes user
 ) {
     public static PostWithUserRes from(Post post) {
         User user = post.getUser();
@@ -29,7 +30,7 @@ public record PostWithUserRes(
             user.getId(),
             user.getNick(),
             user.getProfile(),
-            post.getUser()
+            UserRes.from(user)
         );
     }
 }

@@ -131,14 +131,10 @@ public class AuthService {
         if (authRepository.existsByEmail(registrationReq.email())){
             throw new DuplicatedRecordException("이미 등록된 이메일입니다.");
         }
-        User newUser = new User();
-        newUser.setEmail(registrationReq.email());
-        newUser.setPassword(passwordEncoder.encode(registrationReq.password()));
-        newUser.setNick(registrationReq.nick());
-        newUser.setProfile(registrationReq.profile());
-        newUser.setProvider(ProviderPolicy.NONE);
-        newUser.setRole(RolePolicy.NORMAL);
-        newUser.setRefreshToken(null);
+        String encodePassword = passwordEncoder.encode(registrationReq.password());
+        User newUser = registrationReq.toEntity(encodePassword);
+//      User newUser = registrationReq.toEntity(passwordEncoder.encode(registrationReq.password()));
+
         authRepository.save(newUser);
     }
 

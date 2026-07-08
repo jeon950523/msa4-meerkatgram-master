@@ -1,5 +1,8 @@
 package com.msa4meerkatgram.domain.auth.requests;
 
+import com.msa4meerkatgram.domain.user.entities.User;
+import com.msa4meerkatgram.global.security.constant.ProviderPolicy;
+import com.msa4meerkatgram.global.security.constant.RolePolicy;
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -29,6 +32,17 @@ public record RegistrationReq(
             return false;
         }
         return this.password.equals(this.passwordChk);
+    }
+    public User toEntity(String encodePassword){
+        User newUser = new User();
+        newUser.setEmail(this.email);
+        newUser.setPassword(encodePassword);
+        newUser.setNick(this.nick);
+        newUser.setProfile(this.profile);
+        newUser.setProvider(ProviderPolicy.NONE);
+        newUser.setRole(RolePolicy.NORMAL);
+        newUser.setRefreshToken(null);
+        return newUser;
     }
     
 }

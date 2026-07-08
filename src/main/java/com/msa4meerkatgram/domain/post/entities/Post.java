@@ -30,7 +30,7 @@ public class Post {
     private Long id;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)
     @JoinColumn(
         name = "user_id",
         nullable = false,
