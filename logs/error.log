@@ -80,3 +80,359 @@ This generated password is for development use only. Your security configuration
 2026-07-10T11:08:39.841+09:00  INFO 21276 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-07-10T11:08:39.842+09:00  INFO 21276 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-07-10T11:08:39.845+09:00  INFO 21276 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-10T11:08:41.911+09:00  INFO 13408 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Starting Msa4MeerkatgramApplication vv1 using Java 17.0.19 with PID 13408 (E:\Jeon\workspace\msa4-meerkatgram-master\build\classes\java\main started by user in E:\Jeon\workspace\msa4-meerkatgram-master)
+2026-07-10T11:08:41.912+09:00  INFO 13408 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-10T11:08:42.364+09:00  INFO 13408 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-10T11:08:42.396+09:00  INFO 13408 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2026-07-10T11:08:42.691+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-10T11:08:42.699+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-10T11:08:42.699+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-10T11:08:42.734+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-10T11:08:42.736+09:00  INFO 13408 --- [msa4-meerkatgram] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 802 ms
+2026-07-10T11:08:42.794+09:00  WARN 13408 --- [msa4-meerkatgram] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-10T11:08:42.836+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-10T11:08:42.860+09:00  INFO 13408 --- [msa4-meerkatgram] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-10T11:08:42.876+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-10T11:08:43.018+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-10T11:08:43.032+09:00  INFO 13408 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-10T11:08:43.179+09:00  INFO 13408 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c6c84fa
+2026-07-10T11:08:43.180+09:00  INFO 13408 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-10T11:08:43.223+09:00  INFO 13408 --- [msa4-meerkatgram] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-10T11:08:43.684+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-10T11:08:43.686+09:00  INFO 13408 --- [msa4-meerkatgram] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T11:08:44.029+09:00  WARN 13408 --- [msa4-meerkatgram] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a54feb13-c482-4a1b-b1b6-62bd60458daf
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-10T11:08:44.032+09:00  INFO 13408 --- [msa4-meerkatgram] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-10T11:08:44.199+09:00  INFO 13408 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-10T11:08:44.205+09:00  INFO 13408 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Started Msa4MeerkatgramApplication in 2.526 seconds (process running for 2.779)
+2026-07-10T11:08:57.988+09:00  INFO 13408 --- [msa4-meerkatgram] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-10T11:08:57.988+09:00  INFO 13408 --- [msa4-meerkatgram] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-10T11:08:57.989+09:00  INFO 13408 --- [msa4-meerkatgram] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-10T11:39:58.012+09:00  INFO 13408 --- [msa4-meerkatgram] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 152 ms
+2026-07-10T11:47:42.906+09:00  INFO 13408 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-10T11:47:42.923+09:00  INFO 13408 --- [msa4-meerkatgram] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-10T11:47:42.926+09:00  INFO 13408 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T11:47:42.927+09:00  INFO 13408 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-10T11:47:42.928+09:00  INFO 13408 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-10T11:47:44.878+09:00  INFO 10588 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Starting Msa4MeerkatgramApplication vv1 using Java 17.0.19 with PID 10588 (E:\Jeon\workspace\msa4-meerkatgram-master\build\classes\java\main started by user in E:\Jeon\workspace\msa4-meerkatgram-master)
+2026-07-10T11:47:44.879+09:00  INFO 10588 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-10T11:47:45.320+09:00  INFO 10588 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-10T11:47:45.350+09:00  INFO 10588 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2026-07-10T11:47:45.635+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-10T11:47:45.642+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-10T11:47:45.643+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-10T11:47:45.672+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-10T11:47:45.672+09:00  INFO 10588 --- [msa4-meerkatgram] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 771 ms
+2026-07-10T11:47:45.729+09:00  WARN 10588 --- [msa4-meerkatgram] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-10T11:47:45.773+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-10T11:47:45.796+09:00  INFO 10588 --- [msa4-meerkatgram] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-10T11:47:45.812+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-10T11:47:45.950+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-10T11:47:45.965+09:00  INFO 10588 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-10T11:47:46.107+09:00  INFO 10588 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f430ea8
+2026-07-10T11:47:46.108+09:00  INFO 10588 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-10T11:47:46.157+09:00  INFO 10588 --- [msa4-meerkatgram] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-10T11:47:46.609+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-10T11:47:46.612+09:00  INFO 10588 --- [msa4-meerkatgram] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T11:47:46.948+09:00  WARN 10588 --- [msa4-meerkatgram] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 24179637-f8d3-4e5f-8b75-cd93fa876aaa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-10T11:47:46.951+09:00  INFO 10588 --- [msa4-meerkatgram] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-10T11:47:47.121+09:00  INFO 10588 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-10T11:47:47.125+09:00  INFO 10588 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Started Msa4MeerkatgramApplication in 2.477 seconds (process running for 2.729)
+2026-07-10T11:47:52.697+09:00  INFO 10588 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-10T11:47:52.697+09:00  INFO 10588 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-10T11:47:52.698+09:00  INFO 10588 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-10T11:47:53.062+09:00  INFO 10588 --- [msa4-meerkatgram] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 180 ms
+2026-07-10T12:47:29.768+09:00  INFO 10588 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-10T12:47:29.785+09:00  INFO 10588 --- [msa4-meerkatgram] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-10T12:47:29.788+09:00  INFO 10588 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T12:47:29.789+09:00  INFO 10588 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-10T12:47:29.790+09:00  INFO 10588 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-10T12:47:44.657+09:00  INFO 20976 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Starting Msa4MeerkatgramApplication vv1 using Java 17.0.19 with PID 20976 (E:\Jeon\workspace\msa4-meerkatgram-master\build\classes\java\main started by user in E:\Jeon\workspace\msa4-meerkatgram-master)
+2026-07-10T12:47:44.659+09:00  INFO 20976 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-10T12:47:45.095+09:00  INFO 20976 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-10T12:47:45.127+09:00  INFO 20976 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2026-07-10T12:47:45.435+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-10T12:47:45.443+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-10T12:47:45.443+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-10T12:47:45.477+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-10T12:47:45.477+09:00  INFO 20976 --- [msa4-meerkatgram] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 798 ms
+2026-07-10T12:47:45.541+09:00  WARN 20976 --- [msa4-meerkatgram] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-10T12:47:45.584+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-10T12:47:45.608+09:00  INFO 20976 --- [msa4-meerkatgram] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-10T12:47:45.624+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-10T12:47:45.770+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-10T12:47:45.785+09:00  INFO 20976 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-10T12:47:45.934+09:00  INFO 20976 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48da64f2
+2026-07-10T12:47:45.936+09:00  INFO 20976 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-10T12:47:45.988+09:00  INFO 20976 --- [msa4-meerkatgram] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-10T12:47:46.463+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-10T12:47:46.465+09:00  INFO 20976 --- [msa4-meerkatgram] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T12:47:46.820+09:00  WARN 20976 --- [msa4-meerkatgram] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bb739db4-96af-4f81-98de-647ce6f77dcc
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-10T12:47:46.824+09:00  INFO 20976 --- [msa4-meerkatgram] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-10T12:47:47.011+09:00  INFO 20976 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-10T12:47:47.016+09:00  INFO 20976 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Started Msa4MeerkatgramApplication in 2.607 seconds (process running for 2.862)
+2026-07-10T12:47:48.383+09:00  INFO 20976 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-10T12:47:48.383+09:00  INFO 20976 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-10T12:47:48.384+09:00  INFO 20976 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-10T12:47:48.766+09:00  INFO 20976 --- [msa4-meerkatgram] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 193 ms
+2026-07-10T12:49:03.733+09:00  INFO 20976 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-10T12:49:03.752+09:00  INFO 20976 --- [msa4-meerkatgram] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-10T12:49:03.755+09:00  INFO 20976 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T12:49:03.756+09:00  INFO 20976 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-10T12:49:03.759+09:00  INFO 20976 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-10T12:49:05.636+09:00  INFO 7348 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Starting Msa4MeerkatgramApplication vv1 using Java 17.0.19 with PID 7348 (E:\Jeon\workspace\msa4-meerkatgram-master\build\classes\java\main started by user in E:\Jeon\workspace\msa4-meerkatgram-master)
+2026-07-10T12:49:05.637+09:00  INFO 7348 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-10T12:49:06.073+09:00  INFO 7348 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-10T12:49:06.109+09:00  INFO 7348 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+2026-07-10T12:49:06.411+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-10T12:49:06.419+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-10T12:49:06.419+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-10T12:49:06.448+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-10T12:49:06.448+09:00  INFO 7348 --- [msa4-meerkatgram] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 788 ms
+2026-07-10T12:49:06.511+09:00  WARN 7348 --- [msa4-meerkatgram] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-10T12:49:06.555+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-10T12:49:06.584+09:00  INFO 7348 --- [msa4-meerkatgram] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-10T12:49:06.603+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-10T12:49:06.745+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-10T12:49:06.761+09:00  INFO 7348 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-10T12:49:06.916+09:00  INFO 7348 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44a44a04
+2026-07-10T12:49:06.917+09:00  INFO 7348 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-10T12:49:06.961+09:00  INFO 7348 --- [msa4-meerkatgram] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-10T12:49:07.420+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-10T12:49:07.422+09:00  INFO 7348 --- [msa4-meerkatgram] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T12:49:07.773+09:00  WARN 7348 --- [msa4-meerkatgram] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2591f12c-5c0d-4903-92a6-f58ab3381ca1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-10T12:49:07.777+09:00  INFO 7348 --- [msa4-meerkatgram] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-10T12:49:07.955+09:00  INFO 7348 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-10T12:49:07.960+09:00  INFO 7348 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Started Msa4MeerkatgramApplication in 2.563 seconds (process running for 2.813)
+2026-07-10T12:49:08.031+09:00  INFO 7348 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-10T12:49:08.031+09:00  INFO 7348 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-10T12:49:08.032+09:00  INFO 7348 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-10T12:49:08.372+09:00  INFO 7348 --- [msa4-meerkatgram] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 193 ms
+2026-07-10T13:00:01.883+09:00  INFO 7348 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-10T13:00:01.902+09:00  INFO 7348 --- [msa4-meerkatgram] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-10T13:00:01.904+09:00  INFO 7348 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:00:01.906+09:00  INFO 7348 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-10T13:00:01.908+09:00  INFO 7348 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-10T13:00:06.045+09:00  INFO 6428 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Starting Msa4MeerkatgramApplication vv1 using Java 17.0.19 with PID 6428 (E:\Jeon\workspace\msa4-meerkatgram-master\build\classes\java\main started by user in E:\Jeon\workspace\msa4-meerkatgram-master)
+2026-07-10T13:00:06.047+09:00  INFO 6428 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-10T13:00:06.615+09:00  INFO 6428 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-10T13:00:06.649+09:00  INFO 6428 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+2026-07-10T13:00:06.946+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-10T13:00:06.953+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-10T13:00:06.953+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-10T13:00:06.986+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-10T13:00:06.986+09:00  INFO 6428 --- [msa4-meerkatgram] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 909 ms
+2026-07-10T13:00:07.041+09:00  WARN 6428 --- [msa4-meerkatgram] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-10T13:00:07.085+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-10T13:00:07.117+09:00  INFO 6428 --- [msa4-meerkatgram] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-10T13:00:07.134+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-10T13:00:07.276+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-10T13:00:07.291+09:00  INFO 6428 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-10T13:00:07.440+09:00  INFO 6428 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33fec21
+2026-07-10T13:00:07.441+09:00  INFO 6428 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-10T13:00:07.487+09:00  INFO 6428 --- [msa4-meerkatgram] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-10T13:00:07.967+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-10T13:00:07.969+09:00  INFO 6428 --- [msa4-meerkatgram] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:00:08.349+09:00  WARN 6428 --- [msa4-meerkatgram] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 607527af-4680-4c7b-8f6d-5694603eceab
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-10T13:00:08.354+09:00  INFO 6428 --- [msa4-meerkatgram] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-10T13:00:08.530+09:00  INFO 6428 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-10T13:00:08.534+09:00  INFO 6428 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Started Msa4MeerkatgramApplication in 2.743 seconds (process running for 2.985)
+2026-07-10T13:00:10.724+09:00  INFO 6428 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-10T13:00:10.724+09:00  INFO 6428 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-10T13:00:10.726+09:00  INFO 6428 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-10T13:00:11.103+09:00  INFO 6428 --- [msa4-meerkatgram] [http-nio-8080-exec-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 191 ms
+2026-07-10T13:06:37.180+09:00  INFO 6428 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-10T13:06:37.197+09:00  INFO 6428 --- [msa4-meerkatgram] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-10T13:06:37.199+09:00  INFO 6428 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:06:37.200+09:00  INFO 6428 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-10T13:06:37.204+09:00  INFO 6428 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-10T13:06:39.086+09:00  INFO 8064 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Starting Msa4MeerkatgramApplication vv1 using Java 17.0.19 with PID 8064 (E:\Jeon\workspace\msa4-meerkatgram-master\build\classes\java\main started by user in E:\Jeon\workspace\msa4-meerkatgram-master)
+2026-07-10T13:06:39.087+09:00  INFO 8064 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-10T13:06:39.520+09:00  INFO 8064 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-10T13:06:39.553+09:00  INFO 8064 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2026-07-10T13:06:39.845+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-10T13:06:39.851+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-10T13:06:39.851+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-10T13:06:39.881+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-10T13:06:39.881+09:00  INFO 8064 --- [msa4-meerkatgram] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 773 ms
+2026-07-10T13:06:39.945+09:00  WARN 8064 --- [msa4-meerkatgram] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-10T13:06:39.990+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-10T13:06:40.015+09:00  INFO 8064 --- [msa4-meerkatgram] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-10T13:06:40.031+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-10T13:06:40.181+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-10T13:06:40.195+09:00  INFO 8064 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-10T13:06:40.344+09:00  INFO 8064 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66abb2fa
+2026-07-10T13:06:40.345+09:00  INFO 8064 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-10T13:06:40.390+09:00  INFO 8064 --- [msa4-meerkatgram] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-10T13:06:40.856+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-10T13:06:40.858+09:00  INFO 8064 --- [msa4-meerkatgram] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:06:41.209+09:00  WARN 8064 --- [msa4-meerkatgram] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7e213d53-5a2e-4577-b533-cc00261ae672
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-10T13:06:41.212+09:00  INFO 8064 --- [msa4-meerkatgram] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-10T13:06:41.376+09:00  INFO 8064 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-10T13:06:41.381+09:00  INFO 8064 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Started Msa4MeerkatgramApplication in 2.53 seconds (process running for 2.773)
+2026-07-10T13:09:09.164+09:00  INFO 8064 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-10T13:09:09.180+09:00  INFO 8064 --- [msa4-meerkatgram] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-10T13:09:09.182+09:00  INFO 8064 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:09:09.183+09:00  INFO 8064 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-10T13:09:09.186+09:00  INFO 8064 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-10T13:09:11.060+09:00  INFO 12820 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Starting Msa4MeerkatgramApplication vv1 using Java 17.0.19 with PID 12820 (E:\Jeon\workspace\msa4-meerkatgram-master\build\classes\java\main started by user in E:\Jeon\workspace\msa4-meerkatgram-master)
+2026-07-10T13:09:11.060+09:00  INFO 12820 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-10T13:09:11.610+09:00  INFO 12820 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-10T13:09:11.642+09:00  INFO 12820 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2026-07-10T13:09:11.936+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-10T13:09:11.943+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-10T13:09:11.943+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-10T13:09:11.976+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-10T13:09:11.976+09:00  INFO 12820 --- [msa4-meerkatgram] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 894 ms
+2026-07-10T13:09:12.038+09:00  WARN 12820 --- [msa4-meerkatgram] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-10T13:09:12.081+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-10T13:09:12.106+09:00  INFO 12820 --- [msa4-meerkatgram] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-10T13:09:12.122+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-10T13:09:12.261+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-10T13:09:12.276+09:00  INFO 12820 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-10T13:09:12.424+09:00  INFO 12820 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2133b712
+2026-07-10T13:09:12.425+09:00  INFO 12820 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-10T13:09:12.468+09:00  INFO 12820 --- [msa4-meerkatgram] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-10T13:09:12.966+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-10T13:09:12.967+09:00  INFO 12820 --- [msa4-meerkatgram] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:09:13.315+09:00  WARN 12820 --- [msa4-meerkatgram] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 66c57540-bf07-4f42-8879-6bcc53114f15
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-10T13:09:13.319+09:00  INFO 12820 --- [msa4-meerkatgram] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-10T13:09:13.495+09:00  INFO 12820 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-10T13:09:13.500+09:00  INFO 12820 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Started Msa4MeerkatgramApplication in 2.703 seconds (process running for 2.951)
+2026-07-10T13:09:14.937+09:00  INFO 12820 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-10T13:09:14.938+09:00  INFO 12820 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-10T13:09:14.938+09:00  INFO 12820 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-10T13:09:15.315+09:00  INFO 12820 --- [msa4-meerkatgram] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 196 ms
+2026-07-10T13:11:25.564+09:00  INFO 12820 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-10T13:11:25.581+09:00  INFO 12820 --- [msa4-meerkatgram] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-10T13:11:25.583+09:00  INFO 12820 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:11:25.584+09:00  INFO 12820 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-10T13:11:25.587+09:00  INFO 12820 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-10T13:11:27.414+09:00  INFO 11068 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Starting Msa4MeerkatgramApplication vv1 using Java 17.0.19 with PID 11068 (E:\Jeon\workspace\msa4-meerkatgram-master\build\classes\java\main started by user in E:\Jeon\workspace\msa4-meerkatgram-master)
+2026-07-10T13:11:27.415+09:00  INFO 11068 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-07-10T13:11:27.843+09:00  INFO 11068 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-10T13:11:27.872+09:00  INFO 11068 --- [msa4-meerkatgram] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2026-07-10T13:11:28.164+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-10T13:11:28.172+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-10T13:11:28.172+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-10T13:11:28.202+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-10T13:11:28.202+09:00  INFO 11068 --- [msa4-meerkatgram] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 766 ms
+2026-07-10T13:11:28.263+09:00  WARN 11068 --- [msa4-meerkatgram] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-10T13:11:28.309+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-10T13:11:28.333+09:00  INFO 11068 --- [msa4-meerkatgram] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-10T13:11:28.350+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-10T13:11:28.493+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-10T13:11:28.508+09:00  INFO 11068 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-10T13:11:28.654+09:00  INFO 11068 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a6fc1bc
+2026-07-10T13:11:28.655+09:00  INFO 11068 --- [msa4-meerkatgram] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-10T13:11:28.703+09:00  INFO 11068 --- [msa4-meerkatgram] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.9
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-10T13:11:29.163+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-10T13:11:29.165+09:00  INFO 11068 --- [msa4-meerkatgram] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:11:29.505+09:00  WARN 11068 --- [msa4-meerkatgram] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7d963f60-0f8f-4614-b192-f6471185242f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-10T13:11:29.510+09:00  INFO 11068 --- [msa4-meerkatgram] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-10T13:11:29.676+09:00  INFO 11068 --- [msa4-meerkatgram] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-10T13:11:29.681+09:00  INFO 11068 --- [msa4-meerkatgram] [main] c.m.Msa4MeerkatgramApplication           : Started Msa4MeerkatgramApplication in 2.5 seconds (process running for 2.749)
+2026-07-10T13:11:29.707+09:00  INFO 11068 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-10T13:11:29.707+09:00  INFO 11068 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-10T13:11:29.708+09:00  INFO 11068 --- [msa4-meerkatgram] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-10T13:11:30.085+09:00  INFO 11068 --- [msa4-meerkatgram] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 195 ms
+2026-07-10T13:15:39.908+09:00  INFO 11068 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-10T13:15:39.924+09:00  INFO 11068 --- [msa4-meerkatgram] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-10T13:15:39.927+09:00  INFO 11068 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-10T13:15:39.928+09:00  INFO 11068 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-10T13:15:39.931+09:00  INFO 11068 --- [msa4-meerkatgram] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
