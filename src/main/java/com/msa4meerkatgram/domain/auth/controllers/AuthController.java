@@ -41,13 +41,7 @@ public class AuthController {
         @Valid @RequestBody LoginReq loginReq
         , HttpServletResponse response
         ){
-        return ResponseEntity.status(200).body(
-            GlobalRes.<AuthRes>builder()
-                .code("00")
-                .message("로그인완료")
-                .data(authService.login(response,loginReq))
-                .build()
-        );
+        return ResponseEntity.ok(GlobalRes.success(authService.login(response, loginReq)));
     }
     
     @Operation(summary = "리이슈 처리",description = "토큰 재발급, 엑세스와 리프래시")
@@ -56,38 +50,22 @@ public class AuthController {
     public ResponseEntity<GlobalRes<AuthRes>> reissue(
         HttpServletRequest request, HttpServletResponse response
     ){
-        return ResponseEntity.status(200).body(
-            GlobalRes.<AuthRes>builder()
-                .code("00")
-                .message("토큰 재발급 완료")
-                .data(authService.reissue(request, response))
-                .build()
-        );
+        return ResponseEntity.ok(GlobalRes.success(authService.reissue(request, response)));
     }
     @ApiUnauthorizedErrorResponse
     @Operation(summary = "로그아웃 처리",description = "로그아웃")
     @PostMapping("/logout")
-    public ResponseEntity<GlobalRes<String>> logout(HttpServletResponse response, @AuthenticationPrincipal Claims claims){
+    public ResponseEntity<GlobalRes<Void>> logout(HttpServletResponse response, @AuthenticationPrincipal Claims claims){
         authService.logout(response, Long.parseLong(claims.getSubject()));
 
-        return ResponseEntity.status(200).body(
-            GlobalRes.<String>builder()
-                .code("00")
-                .message("로그아웃 완료")
-                .build()
-        );
+        return ResponseEntity.ok(GlobalRes.success());
     }
     @Operation(summary = "회원가입 처리",description = "이메일과 비밀번호, 프로필 필수")
     @PostMapping("/registration")
-    public ResponseEntity<GlobalRes<String>> registration(@Valid @RequestBody RegistrationReq registrationReq){
+    public ResponseEntity<GlobalRes<Void>> registration(@Valid @RequestBody RegistrationReq registrationReq){
         authService.registration(registrationReq);
 
-        return ResponseEntity.status(200).body(
-            GlobalRes.<String>builder()
-                .code("00")
-                .message("회원가입 완료")
-                .build()
-        );
+        return ResponseEntity.ok(GlobalRes.success());
     }
 
 
