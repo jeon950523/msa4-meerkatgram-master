@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @Tag(name = "파일 API" , description = "파일 업로드 관련")
+@CustomApiResponse(value = {CustomResponseCode.SYS_ERROR, CustomResponseCode.FILE_MANAGED_ERROR})
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api")
@@ -24,10 +25,6 @@ public class FileController {
     private final FileService fileService;
     
     @Operation(summary = "프로필 이미지 업로드", description = "회원의 프로필 이미지를 업로드하여 서버에 물리 파일로 저장합니다.")
-    @CustomApiResponse(value = {
-        CustomResponseCode.FILE_MANAGED_ERROR
-        , CustomResponseCode.SYS_ERROR
-      })
     @PostMapping("/files/profiles")
     public ResponseEntity<GlobalRes<FileRes>> storeProfile(
         @ModelAttribute MultipartFile file
@@ -35,9 +32,6 @@ public class FileController {
         return ResponseEntity.ok(GlobalRes.success(fileService.storeProfile(file)));
     }
     @Operation(summary = "게시글 이미지 업로드", description = "작성할 게시글에 첨부할 이미지를 업로드하여 서버에 저장합니다.")
-    @CustomApiResponse(value = {
-        CustomResponseCode.FILE_MANAGED_ERROR
-        , CustomResponseCode.SYS_ERROR})
     @PostMapping("/files/posts")
     public ResponseEntity<GlobalRes<FileRes>> storePosts(
         @ModelAttribute MultipartFile file

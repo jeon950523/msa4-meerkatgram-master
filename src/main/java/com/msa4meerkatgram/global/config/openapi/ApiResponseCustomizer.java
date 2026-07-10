@@ -16,14 +16,23 @@ import java.util.*;
 public class ApiResponseCustomizer implements OperationCustomizer {
     @Override
     public Operation customize(Operation operation, HandlerMethod handlerMethod) {
-        CustomApiResponse annotation = handlerMethod.getMethodAnnotation(CustomApiResponse.class);
-        if (annotation == null) {
+        CustomApiResponse classAnnotation = handlerMethod.getBeanType().getAnnotation(CustomApiResponse.class);
+        CustomApiResponse methodAnnotation = handlerMethod.getMethodAnnotation(CustomApiResponse.class);
+        if (classAnnotation == null && methodAnnotation == null) {
             return operation;
         }
-
+        
+        Set<CustomResponseCode> allCodes = new LinkedHashSet<>();
+        if (classAnnotation != null) {
+            allCodes.addAll(Arrays.asList(classAnnotation.value()));
+        }
+        if (methodAnnotation != null) {
+            allCodes.addAll(Arrays.asList(methodAnnotation.value()));
+        }
+        
         Map<Integer, List<CustomResponseCode>> errorCodeMap = new HashMap<>();
 
-        for(CustomResponseCode injectErrorCode : annotation.value()) {
+        for(CustomResponseCode injectErrorCode : allCodes) {
             int httpStatus = injectErrorCode.getHttpStatus().value();
             errorCodeMap.computeIfAbsent(httpStatus, item -> new ArrayList<>()).add(injectErrorCode);
         }

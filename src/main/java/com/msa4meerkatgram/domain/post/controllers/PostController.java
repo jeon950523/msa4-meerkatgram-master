@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Tag(name = "게시글 API",description = "회원의 게시글 조회 및 작성과 삭제")
+@CustomApiResponse(value = {CustomResponseCode.DB_ERROR, CustomResponseCode.SYS_ERROR})
 @Validated
 @RequiredArgsConstructor 
 @RestController
@@ -33,9 +34,7 @@ public class PostController {
     
     @ApiResponse(responseCode = "200", description = "게시글 목록 획득 성공")
     @CustomApiResponse(value = {
-        CustomResponseCode.DB_ERROR
-        , CustomResponseCode.SYS_ERROR
-        , CustomResponseCode.NOT_FOUND_DATA_ERROR})
+         CustomResponseCode.NOT_FOUND_DATA_ERROR})
     @Operation(summary = "게시글 조회",description = "작성된 전체 게시글 조회")
     @GetMapping("/posts")
     public ResponseEntity<GlobalRes<PostIndexRes>> index(PostIndexRequest req) {
@@ -46,9 +45,7 @@ public class PostController {
     }
     @Operation(summary = "게시글 상세 조회",description = "선택한 게시글의 정보를 상세조회")
     @CustomApiResponse(value = {
-        CustomResponseCode.DB_ERROR
-        , CustomResponseCode.SYS_ERROR
-        , CustomResponseCode.NOT_FOUND_DATA_ERROR
+        CustomResponseCode.NOT_FOUND_DATA_ERROR
         , CustomResponseCode.INVALID_PARAMETER_ERROR})
     @GetMapping("/posts/{id}")
     public ResponseEntity<GlobalRes<PostWithUserRes>> show(
@@ -62,9 +59,7 @@ public class PostController {
     @Operation(summary = "게시글 작성", description = "로그인한 유저가 새로운 게시글을 작성하고 서버에 저장합니다.")
     @PostMapping("/posts")
     @CustomApiResponse(value = {
-        CustomResponseCode.DB_ERROR
-        , CustomResponseCode.SYS_ERROR
-        , CustomResponseCode.NOT_FOUND_DATA_ERROR
+        CustomResponseCode.NOT_FOUND_DATA_ERROR
     , CustomResponseCode.UNAUTHORIZED_ERROR
     , CustomResponseCode.INVALID_PARAMETER_ERROR
     , CustomResponseCode.INVALID_TOKEN_ERROR})
@@ -75,9 +70,7 @@ public class PostController {
     }
     @Operation(summary = "게시글 삭제", description = "내가 쓴 게시글을 소프트 딜리트 형태로 삭제 처리합니다.")
     @CustomApiResponse(value = {
-        CustomResponseCode.DB_ERROR
-        , CustomResponseCode.SYS_ERROR
-        , CustomResponseCode.NOT_FOUND_DATA_ERROR
+        CustomResponseCode.NOT_FOUND_DATA_ERROR
         , CustomResponseCode.UNAUTHORIZED_ERROR
         ,CustomResponseCode.INVALID_TOKEN_ERROR
     })
@@ -93,9 +86,7 @@ public class PostController {
     
     @Operation(summary = "내가 쓴 게시글 조회", description = "현재 로그인한 유저 본인이 작성한 전체 게시글 목록을 조회합니다.")
     @CustomApiResponse(value = {
-        CustomResponseCode.DB_ERROR
-        , CustomResponseCode.SYS_ERROR
-        , CustomResponseCode.NOT_FOUND_DATA_ERROR
+         CustomResponseCode.NOT_FOUND_DATA_ERROR
         , CustomResponseCode.UNAUTHORIZED_ERROR
         ,CustomResponseCode.INVALID_TOKEN_ERROR})
     @GetMapping("/posts/my")
